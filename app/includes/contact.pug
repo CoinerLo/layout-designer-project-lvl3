@@ -1,0 +1,47 @@
+-
+  var contacts = {
+    "A": [{
+      name: "Алексей Примадонин",
+      status: "Онлайн",
+      avatar: "images/avatar_3.jpg"
+    }],
+    "В": [{
+      name: "Вениамин Редакторович",
+      status: "Онлайн",
+      avatar: "images/avatar_4.jpg"
+    }],
+    "Д": [{
+      name: "Джедай Падаванов",
+      status: "Был онлайн вчера",
+      avatar: "images/avatar_2.jpg"
+    }],
+    "К": [{
+      name: "Кодовёнок Хекслетович",
+      status: "Был онлайн 3 часа назад",
+      avatar: "images/avatar_1.jpg"
+    },
+    {
+      name: "Королева Верстальщина",
+      status: "Была онлайн вчера",
+      avatar: "images/avatar_5.jpg"
+    }],
+    "П": [{
+      name: "Питонист Джангович",
+      status: "Был онлайн вчера",
+      avatar: "images/avatar_6.jpg"
+    }],
+  }
+div(class="d-flex flex-column align-items-normal rg-50px")
+  each values, letter in contacts
+    div(class="d-flex flex-column align-items-normal rg-19px")
+      div(class="text-muted lh-19")
+        = letter
+      div(class="d-flex flex-column align-items-normal rg-3")
+        each contact in values
+          a(href="" class="d-flex justify-content-normal py-3 px-3 cg-4 shadow-sm")
+            img(src=contact.avatar alt=contact.name class="avatar")
+            div(class="d-flex flex-column align-items-normal p-4")
+              div(class="font-weight-bold color-dark") 
+                = contact.name
+              div(class="small lh-19 color-secondary") 
+                = contact.status

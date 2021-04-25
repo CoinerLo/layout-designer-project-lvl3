@@ -1,0 +1,50 @@
+body {
+  color: theme-color("dark");
+  font-size: 16px;
+  line-height: 1.5;
+
+  border-color: theme-color("gray");
+  border-radius: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 700;
+}
+
+.hide-scrollbar {
+  @include hide-scrollbar();
+}
+
+.radius {
+  border-radius: 1rem;
+}
+
+.lh-19 {
+  line-height: 19px;
+}
+
+.avatar {
+  @include avatar(50px);
+  margin-top: 5px;
+  margin-bottom: 4px;
+}
+
+.rg-50px {
+  row-gap: 50px;
+}
+
+.rg-19px {
+  row-gap: 19px;
+}
+
+.rg-3 {
+  row-gap: 1rem;
+}
+
+.cg-4 {
+  column-gap: 1.5rem
+}

@@ -1,0 +1,55 @@
+doctype html
+html(lang="ru" class="h-100")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible" content="ie=edge")
+    title="Мессенджер «Hexlet Chat». Игорь Ломакин"
+    link(rel="stylesheet" href="style.css")
+    script(src="js/jquery.min.js")
+    script(src="js/popper.js")
+    script(src="js/bootstrap.min.js")
+  body(class="h-100 bg-color-gray")
+    div(class="conteiner h-100 pt-md-4 pb-md-4 pr-4 pl-4")
+      div(class="row radius bg-color-white mx-0")
+        aside(class="d-flex flex-column col-xl-4 h-100 overflow-hidden pl-0")
+          header(class="pl-4 pr-6")
+            nav(class="d-flex")
+              a(href="index.html" class="py-4")
+                img(src="images/logo.svg", alt="Hexlet" class="logo")
+              ul(class="nav d-flex flex-nowrap" role="tablist")
+                - 
+                  var tabs = {
+                    "contacts": [{
+                      img: "people",
+                      text: "Контакты",
+                      selected: `${page=="index"}`,
+                      href: "#contacts",
+                    }],
+                    "chats": [{
+                      img: "chat",
+                      text: "Сообщения",
+                      selected: `${page=="chat"}`,
+                      href: "#chats",
+                    }],
+                    "profile": [{
+                      img: "person",
+                      text: "Профиль",
+                      selected: "false",
+                      href: "#profile",
+                    }],
+                  }
+                each content, tab in tabs
+                  li(role="presentation")
+                    a(class="d-md-flex color-light" id=`${tab}-tab` data-toggle="tab" href=content.href role="tab" aria-controls=tab aria-selected=content.selected)
+                      img(alt=content.text src=`images/icons/${content.img}.svg` class="nav-img")
+                      = content.text
+          div(class="d-flex flex-column h-100 px-4 tab-content overflow-hidden align-items-normal")
+            section(class="tab-pane hide-scrollbar active show fade pt-5")
+              h2(class="mb-4") Контакты
+              mixin search(name, placeholder)
+                form(action="#" name=name class="border-bottom mb-7") 
+                  input(type="search" class="pt-3 px-4 pb-14px border-0 lh-19 w-100" placeholder=placeholder)
+              +search("contacts", "Поиск по контактам")
+        aside(class="col-xl-8")
+              

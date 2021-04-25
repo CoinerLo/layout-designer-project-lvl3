@@ -1,0 +1,20 @@
+.bg-color {
+  &-gray {
+    background-color: theme-color("gray");
+  }
+  &-white {
+    background-color: theme-color("white");
+  }
+}
+
+.color {
+  &-light {
+    color: theme-color("light")
+  }
+  &-dark {
+    color: theme-color("dark")
+  }
+  &-secondary {
+    color: theme-color("secondary")
+  }
+}

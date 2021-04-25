@@ -1,0 +1,24 @@
+header {
+  order: 1;
+  width: 100%;
+
+  color: theme-color("gray");
+
+  background-color: theme-color();
+
+  border-top-left-radius: 1rem;
+}
+
+.logo {
+  width: 15px;
+}
+
+.nav-img {
+  width: 25px;
+}
+
+@media (min-width: 768px) {
+  header {
+    order: 0;
+  }
+}
