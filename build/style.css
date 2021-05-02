@@ -9922,6 +9922,9 @@ a.text-white:hover, a.text-white:focus {
 .radius {
   border-radius: none; }
 
+.border-bottom {
+  border-bottom: 1px solid #efefef !important; }
+
 @media (min-width: 768px) {
   .radius-md {
     border-radius: 1rem; } }
@@ -9970,6 +9973,9 @@ a:hover .color-secondary {
 
 .lh-19 {
   line-height: 19px; }
+
+.opacity-05 {
+  opacity: 0.5; }
 
 .avatar {
   width: 50px;
@@ -10032,6 +10038,11 @@ header {
         -ms-flex-order: 0;
             order: 0;
     border-top-left-radius: 1rem; } }
+
+.avatar-90 {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%; }
 
 .avatar-200 {
   width: 200px;

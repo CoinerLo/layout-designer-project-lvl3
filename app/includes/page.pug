@@ -11,6 +11,9 @@ div(class="conteiner h-100 py-md-4 pr-4 pl-4 bg-color-md-gray")
         +aside-section("chats")
           h2(class="mb-4") Чаты
           include chats.pug
+        +aside-section("profile")
+          h2(class="mb-4") Профиль
+          include profile.pug
     - const extraClass = page == "index" ? "justify-content-center" : "justify-content-normal align-items-normal"
     main(class= `col-md d-md-flex flex-column h-100 overflow-hidden justify-content-center align-items-center ${extraClass}`)
       if page == "index"

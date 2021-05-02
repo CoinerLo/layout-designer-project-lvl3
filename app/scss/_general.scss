@@ -47,6 +47,10 @@ a:hover .color-secondary {
   line-height: 19px;
 }
 
+.opacity-05 {
+  opacity: 0.5;
+}
+
 .avatar {
   @include avatar(50px);
   margin-top: 5px;

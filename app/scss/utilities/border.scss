@@ -2,6 +2,10 @@
   border-radius: none;
 }
 
+.border-bottom {
+  border-bottom: 1px solid map-get($theme-colors, "gray") !important;
+}
+
 @media (min-width: 768px) {
   .radius-md {
     border-radius: 1rem;
