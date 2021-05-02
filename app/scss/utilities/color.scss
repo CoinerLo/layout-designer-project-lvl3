@@ -18,3 +18,11 @@
     color: theme-color("secondary")
   }
 }
+
+@media (min-width: 768px) {
+  .bg-color-md {
+    &-gray {
+      background-color: theme-color("gray");
+    }
+  }
+}

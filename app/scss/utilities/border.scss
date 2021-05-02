@@ -1,0 +1,9 @@
+.radius {
+  border-radius: none;
+}
+
+@media (min-width: 768px) {
+  .radius-md {
+    border-radius: 1rem;
+  }
+}

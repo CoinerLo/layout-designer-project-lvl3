@@ -10,29 +10,128 @@
     <script src="js/popper.js"></script>
     <script src="js/bootstrap.min.js"></script>
   </head>
-  <body class="h-100 bg-color-gray">
-    <div class="conteiner h-100 pt-md-4 pb-md-4 pr-4 pl-4">
-      <div class="row radius bg-color-white mx-0">
-        <aside class="d-flex flex-column col-xl-4 h-100 overflow-hidden pl-0">
+  <body class="h-100">
+    <div class="conteiner h-100 py-md-4 pr-4 pl-4 bg-color-md-gray">
+      <div class="row radius-md no-gutters bg-color-white h-100 overflow-md-hidden">
+        <aside class="d-flex flex-column justify-content-between col-md-7 col-lg-6 col-xl-4 h-100 overflow-hidden flex-grow-1 mx-n4 mx-md-0">
           <header class="pl-4 pr-6">
-            <nav class="d-flex"><a class="py-4" href="index.html"><img class="logo" src="images/logo.svg" alt="Hexlet"></a>
-              <ul class="nav d-flex flex-nowrap" role="tablist">
-                <li role="presentation"><a class="d-md-flex color-light" id="contacts-tab" data-toggle="tab" role="tab" aria-controls="contacts"><img class="nav-img" src="images/icons/undefined.svg"></a></li>
-                <li role="presentation"><a class="d-md-flex color-light" id="chats-tab" data-toggle="tab" role="tab" aria-controls="chats"><img class="nav-img" src="images/icons/undefined.svg"></a></li>
-                <li role="presentation"><a class="d-md-flex color-light" id="profile-tab" data-toggle="tab" role="tab" aria-controls="profile"><img class="nav-img" src="images/icons/undefined.svg"></a></li>
+            <nav class="d-flex align-items-center justify-content-between"><a class="py-4" href="index.html"><img class="logo" src="images/logo.svg" alt="Hexlet"></a>
+              <ul class="nav d-flex align-items-center justify-content-between flex-nowrap cg-7 cg-md-6" role="tablist">
+                <li role="presentation"><a class="d-md-flex align-items-center justify-content-between color-light cg-2 font-size-md-12 font-size-0" id="contacts-tab" data-toggle="tab" href="#contacts" role="tab" aria-controls="contacts" aria-selected="false"><img class="nav-img" alt="Контакты" src="images/icons/people.svg">Контакты</a>
+                </li>
+                <li role="presentation"><a class="d-md-flex align-items-center justify-content-between color-light cg-2 font-size-md-12 font-size-0" id="chats-tab" data-toggle="tab" href="#chats" role="tab" aria-controls="chats" aria-selected="true"><img class="nav-img" alt="Сообщения" src="images/icons/chat.svg">Сообщения</a>
+                </li>
+                <li role="presentation"><a class="d-md-flex align-items-center justify-content-between color-light cg-2 font-size-md-12 font-size-0" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false"><img class="nav-img" alt="Профиль" src="images/icons/person.svg">Профиль</a>
+                </li>
               </ul>
             </nav>
           </header>
-          <div class="d-flex flex-column h-100 px-4 tab-content overflow-hidden align-items-normal">
-            <section class="tab-pane hide-scrollbar active show fade pt-5">
-              <h2 class="mb-4">Контакты</h2>
-                            <form class="border-bottom mb-7" action="#" name="contacts"> 
-                              <input class="pt-3 px-4 pb-14px border-0 lh-19 w-100" type="search" placeholder="Поиск по контактам">
-                            </form>
-            </section>
+          <div class="d-flex justify-content-between flex-column h-100 px-4 tab-content overflow-hidden w-100">
+                <section class="tab-pane fade hide-scrollbar pt-5" id="contacts" role="tabpanel" aria-labelledby="contacts-tab">
+                  <!--section(class="tab-pane hide-scrollbar active show fade pt-5") -->
+                  <h2 class="mb-4">Контакты</h2>
+                  <form class="border-bottom mb-5" action="#" name="contacts"> 
+                    <input class="pt-3 px-4 pb-14px border-0 lh-19 w-100" type="search" placeholder="Поиск по контактам">
+                  </form>
+                  <div class="d-flex flex-column justify-content-between rg-50px">
+                    <div class="d-flex justify-content-between flex-column rg-19px">
+                      <div class="text-muted lh-19">A
+                      </div>
+                      <div class="d-flex justify-content-between flex-column rg-3"><a class="d-flex align-items-center py-3 px-3 cg-4 shadow-sm" href=""><img class="avatar" src="images/avatar_3.jpg" alt="Алексей Примадонин">
+                          <div class="d-flex justify-content-between flex-column">
+                            <div class="font-weight-bold color-dark"> Алексей Примадонин
+                            </div>
+                            <div class="small lh-19 color-secondary"> Онлайн
+                            </div>
+                          </div></a>
+                      </div>
+                    </div>
+                    <div class="d-flex justify-content-between flex-column rg-19px">
+                      <div class="text-muted lh-19">В
+                      </div>
+                      <div class="d-flex justify-content-between flex-column rg-3"><a class="d-flex align-items-center py-3 px-3 cg-4 shadow-sm" href=""><img class="avatar" src="images/avatar_4.jpg" alt="Вениамин Редакторович">
+                          <div class="d-flex justify-content-between flex-column">
+                            <div class="font-weight-bold color-dark"> Вениамин Редакторович
+                            </div>
+                            <div class="small lh-19 color-secondary"> Онлайн
+                            </div>
+                          </div></a>
+                      </div>
+                    </div>
+                    <div class="d-flex justify-content-between flex-column rg-19px">
+                      <div class="text-muted lh-19">Д
+                      </div>
+                      <div class="d-flex justify-content-between flex-column rg-3"><a class="d-flex align-items-center py-3 px-3 cg-4 shadow-sm" href=""><img class="avatar" src="images/avatar_2.jpg" alt="Джедай Падаванов">
+                          <div class="d-flex justify-content-between flex-column">
+                            <div class="font-weight-bold color-dark"> Джедай Падаванов
+                            </div>
+                            <div class="small lh-19 color-secondary"> Был онлайн вчера
+                            </div>
+                          </div></a>
+                      </div>
+                    </div>
+                    <div class="d-flex justify-content-between flex-column rg-19px">
+                      <div class="text-muted lh-19">К
+                      </div>
+                      <div class="d-flex justify-content-between flex-column rg-3"><a class="d-flex align-items-center py-3 px-3 cg-4 shadow-sm" href=""><img class="avatar" src="images/avatar_1.jpg" alt="Кодовёнок Хекслетович">
+                          <div class="d-flex justify-content-between flex-column">
+                            <div class="font-weight-bold color-dark"> Кодовёнок Хекслетович
+                            </div>
+                            <div class="small lh-19 color-secondary"> Был онлайн 3 часа назад
+                            </div>
+                          </div></a><a class="d-flex align-items-center py-3 px-3 cg-4 shadow-sm" href=""><img class="avatar" src="images/avatar_5.jpg" alt="Королева Верстальщина">
+                          <div class="d-flex justify-content-between flex-column">
+                            <div class="font-weight-bold color-dark"> Королева Верстальщина
+                            </div>
+                            <div class="small lh-19 color-secondary"> Была онлайн вчера
+                            </div>
+                          </div></a>
+                      </div>
+                    </div>
+                    <div class="d-flex justify-content-between flex-column rg-19px">
+                      <div class="text-muted lh-19">П
+                      </div>
+                      <div class="d-flex justify-content-between flex-column rg-3"><a class="d-flex align-items-center py-3 px-3 cg-4 shadow-sm" href=""><img class="avatar" src="images/avatar_6.jpg" alt="Питонист Джангович">
+                          <div class="d-flex justify-content-between flex-column">
+                            <div class="font-weight-bold color-dark"> Питонист Джангович
+                            </div>
+                            <div class="small lh-19 color-secondary"> Был онлайн вчера
+                            </div>
+                          </div></a>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                <section class="tab-pane fade hide-scrollbar pt-5 show active" id="chats" role="tabpanel" aria-labelledby="chats-tab">
+                  <h2 class="mb-4">Чаты</h2>
+                  <form class="border-bottom mb-5" action="#" name="messags"> 
+                    <input class="pt-3 px-4 pb-14px border-0 lh-19 w-100" type="search" placeholder="Поиск по сообщениям">
+                  </form>
+                  <div class="d-flex flex-column justify-content-between rg-3"><a class="d-flex justify-content-between cg-4 p-3 shadow-sm" href="chat.html"><img class="avatar" src="images/avatar_4.jpg" alt="Вениамин Редакторович">
+                      <div class="flex-grow-1 text-hidden">
+                        <div class="d-flex justify-content-between align-items-center">
+                          <div class="font-weight-bold color-dark">Вениамин Редакторович</div>
+                          <div class="small color-secondary">11:45</div>
+                        </div><span class="small lh-19 color-secondary">o_O</span>
+                      </div></a><a class="d-flex justify-content-between cg-4 p-3 shadow-sm" href="chat.html"><img class="avatar" src="images/avatar_2.jpg" alt="Джедай Падаванов">
+                      <div class="flex-grow-1 text-hidden">
+                        <div class="d-flex justify-content-between align-items-center">
+                          <div class="font-weight-bold color-dark">Джедай Падаванов</div>
+                          <div class="small color-secondary">10:12</div>
+                        </div><span class="small lh-19 color-secondary">Привет, скоро третий проект? Уже скоро надо будет выложить</span>
+                      </div></a><a class="d-flex justify-content-between cg-4 p-3 shadow-sm" href="chat.html"><img class="avatar" src="images/avatar_3.jpg" alt="Алексей Примадонин">
+                      <div class="flex-grow-1 text-hidden">
+                        <div class="d-flex justify-content-between align-items-center">
+                          <div class="font-weight-bold color-dark">Алексей Примадонин</div>
+                          <div class="small color-secondary">08:53</div>
+                        </div><span class="small lh-19 color-secondary">Тесты упали &gt;_&lt;</span>
+                      </div></a>
+                  </div>
+                </section>
           </div>
         </aside>
-        <aside class="col-xl-8"></aside>
+        <main class="col-md d-md-flex flex-column h-100 overflow-hidden justify-content-center align-items-center justify-content-normal align-items-normal">
+        </main>
       </div>
     </div>
   </body>

@@ -1,0 +1,3 @@
+mixin aside-section(name)
+  section.tab-pane.fade.hide-scrollbar.pt-5(id=name role="tabpanel" aria-labelledby=name + "-tab" class=(page == "index" && name == "contacts") || (page == "chat" && name == "chats") ? "show active" : "")
+    block

@@ -9915,6 +9915,17 @@ a.text-white:hover, a.text-white:focus {
 .color-secondary {
   color: #6c757d; }
 
+@media (min-width: 768px) {
+  .bg-color-md-gray {
+    background-color: #efefef; } }
+
+.radius {
+  border-radius: none; }
+
+@media (min-width: 768px) {
+  .radius-md {
+    border-radius: 1rem; } }
+
 body {
   color: #343a40;
   font-size: 16px;
@@ -9938,14 +9949,31 @@ h5 {
 .hide-scrollbar::-webkit-scrollbar {
   display: none; }
 
-.radius {
-  border-radius: 1rem; }
+a:hover {
+  text-decoration: none;
+  background-color: #4545a5; }
+
+a:hover .color-dark {
+  color: #fbfbfb; }
+
+a:hover .color-secondary {
+  color: #efefef; }
+
+.text-hidden {
+  overflow: hidden;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis; }
+
+.font-size-0 {
+  font-size: 0; }
 
 .lh-19 {
   line-height: 19px; }
 
 .avatar {
   width: 50px;
+  height: 50px;
   border-radius: 50%;
   margin-top: 5px;
   margin-bottom: 4px; }
@@ -9959,10 +9987,30 @@ h5 {
 .rg-3 {
   row-gap: 1rem; }
 
+.cg-7 {
+  -webkit-column-gap: 2.5rem;
+     -moz-column-gap: 2.5rem;
+          column-gap: 2.5rem; }
+
 .cg-4 {
   -webkit-column-gap: 1.5rem;
      -moz-column-gap: 1.5rem;
           column-gap: 1.5rem; }
+
+.cg-2 {
+  -webkit-column-gap: 0.5rem;
+     -moz-column-gap: 0.5rem;
+          column-gap: 0.5rem; }
+
+@media (min-width: 768px) {
+  .overflow-md-hidden {
+    overflow: hidden; }
+  .cg-md-6 {
+    -webkit-column-gap: 2rem;
+       -moz-column-gap: 2rem;
+            column-gap: 2rem; }
+  .font-size-md-12 {
+    font-size: 12.8px; } }
 
 header {
   -webkit-box-ordinal-group: 2;
@@ -9970,8 +10018,7 @@ header {
           order: 1;
   width: 100%;
   color: #efefef;
-  background-color: #4545a5;
-  border-top-left-radius: 1rem; }
+  background-color: #4545a5; }
 
 .logo {
   width: 15px; }
@@ -9983,4 +10030,10 @@ header {
   header {
     -webkit-box-ordinal-group: 1;
         -ms-flex-order: 0;
-            order: 0; } }
+            order: 0;
+    border-top-left-radius: 1rem; } }
+
+.avatar-200 {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%; }

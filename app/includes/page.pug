@@ -1,0 +1,19 @@
+include section.pug
+div(class="conteiner h-100 py-md-4 pr-4 pl-4 bg-color-md-gray")
+  div(class="row radius-md no-gutters bg-color-white h-100 overflow-md-hidden")
+    aside(class="d-flex flex-column justify-content-between col-md-7 col-lg-6 col-xl-4 h-100 overflow-hidden flex-grow-1 mx-n4 mx-md-0")
+      include header.pug
+      div(class="d-flex justify-content-between flex-column h-100 px-4 tab-content overflow-hidden w-100")
+        +aside-section("contacts")
+          //section(class="tab-pane hide-scrollbar active show fade pt-5") 
+          h2(class="mb-4") Контакты
+          include contact.pug
+        +aside-section("chats")
+          h2(class="mb-4") Чаты
+          include chats.pug
+    - const extraClass = page == "index" ? "justify-content-center" : "justify-content-normal align-items-normal"
+    main(class= `col-md d-md-flex flex-column h-100 overflow-hidden justify-content-center align-items-center ${extraClass}`)
+      if page == "index"
+        include greeting.pug
+      else
+        include messages.pug

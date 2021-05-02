@@ -19,8 +19,28 @@ h5 {
   @include hide-scrollbar();
 }
 
-.radius {
-  border-radius: 1rem;
+a:hover {
+  text-decoration: none;
+  background-color: theme-color();
+}
+
+a:hover .color-dark {
+  color: theme-color("light");
+}
+
+a:hover .color-secondary {
+  color: theme-color("gray");
+}
+
+.text-hidden {
+  overflow: hidden;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.font-size-0 {
+  font-size: 0;
 }
 
 .lh-19 {
@@ -42,9 +62,32 @@ h5 {
 }
 
 .rg-3 {
-  row-gap: 1rem;
+  row-gap: $spacer;
+}
+
+.cg-7 {
+  column-gap: $spacer * 2.5;
 }
 
 .cg-4 {
-  column-gap: 1.5rem
+  column-gap: $spacer * 1.5;
+}
+
+.cg-2 {
+  column-gap: $spacer * 0.5;
+}
+
+@media (min-width: 768px) {
+
+  .overflow-md-hidden {
+    overflow: hidden;
+  }
+
+  .cg-md-6 {
+    column-gap: $spacer * 2;
+  }
+
+  .font-size-md-12 {
+    font-size: 12.8px;
+  }
 }

@@ -1,0 +1,32 @@
+header(class="pl-4 pr-6")
+            nav(class="d-flex align-items-center justify-content-between")
+              a(href="index.html" class="py-4")
+                img(src="images/logo.svg", alt="Hexlet" class="logo")
+              ul(class="nav d-flex align-items-center justify-content-between flex-nowrap cg-7 cg-md-6" role="tablist")
+                - 
+                  var tabs = {
+                    "contacts": [{
+                      img: "people",
+                      text: "Контакты",
+                      selected: `${page=="index"}`,
+                      href: "#contacts",
+                    }],
+                    "chats": [{
+                      img: "chat",
+                      text: "Сообщения",
+                      selected: `${page=="chat"}`,
+                      href: "#chats",
+                    }],
+                    "profile": [{
+                      img: "person",
+                      text: "Профиль",
+                      selected: "false",
+                      href: "#profile",
+                    }],
+                  }
+                each content, tab in tabs
+                  li(role="presentation")
+                    each item in content
+                      a(class="d-md-flex align-items-center justify-content-between color-light cg-2 font-size-md-12 font-size-0" id=`${tab}-tab` data-toggle="tab" href=item.href role="tab" aria-controls=tab aria-selected=item.selected)
+                        img(alt=item.text src=`images/icons/${item.img}.svg` class="nav-img")
+                        = item.text

@@ -1,0 +1,28 @@
+include search.pug
++search('messags', 'Поиск по сообщениям')
+-
+  var chats = [{
+    name: "Вениамин Редакторович",
+    time: "11:45",
+    message: "o_O",
+    avatar: "images/avatar_4.jpg"
+  }, {
+    name: "Джедай Падаванов",
+    time: "10:12",
+    message: "Привет, скоро третий проект? Уже скоро надо будет выложить",
+    avatar: "images/avatar_2.jpg"
+  }, {
+    name: "Алексей Примадонин",
+    time: "08:53",
+    message: "Тесты упали >_<",
+    avatar: "images/avatar_3.jpg"
+  }]
+div(class="d-flex flex-column justify-content-between rg-3")
+  each chat in chats
+    a(href="chat.html" class="d-flex justify-content-between cg-4 p-3 shadow-sm")
+      img(src=chat.avatar alt=chat.name class="avatar")
+      div(class="flex-grow-1 text-hidden")
+        div(class="d-flex justify-content-between align-items-center")
+          div(class="font-weight-bold color-dark")= chat.name
+          div(class="small color-secondary")= chat.time
+        span(class="small lh-19 color-secondary")= chat.message

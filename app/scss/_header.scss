@@ -5,8 +5,6 @@ header {
   color: theme-color("gray");
 
   background-color: theme-color();
-
-  border-top-left-radius: 1rem;
 }
 
 .logo {
@@ -20,5 +18,7 @@ header {
 @media (min-width: 768px) {
   header {
     order: 0;
+
+    border-top-left-radius: 1rem;
   }
 }
