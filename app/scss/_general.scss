@@ -19,6 +19,12 @@ h5 {
   @include hide-scrollbar();
 }
 
+.avatar {
+  @include avatar(50px);
+  margin-top: 5px;
+  margin-bottom: 4px;
+}
+
 a:hover {
   text-decoration: none;
   background-color: theme-color();
@@ -51,12 +57,6 @@ a:hover .color-secondary {
   opacity: 0.5;
 }
 
-.avatar {
-  @include avatar(50px);
-  margin-top: 5px;
-  margin-bottom: 4px;
-}
-
 .rg-50px {
   row-gap: 50px;
 }
@@ -87,11 +87,29 @@ a:hover .color-secondary {
     overflow: hidden;
   }
 
+  .cg-md-1 {
+    column-gap: $spacer * 0.25;
+  }
+
+  .cg-md-2 {
+    column-gap: $spacer * 0.5;
+  }
+
   .cg-md-6 {
     column-gap: $spacer * 2;
   }
 
   .font-size-md-12 {
     font-size: 12.8px;
+  }
+
+  .h-md-auto {
+    height: auto;
+  }
+}
+
+@media (min-width: 992px) {
+  .cg-lg-3 {
+    column-gap: $spacer;
   }
 }

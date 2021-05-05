@@ -1,10 +1,11 @@
 @import "_variables";
 @import '../../node_modules/bootstrap/scss/bootstrap.scss';
 @import "mixins";
-@import "utilities/color";
-@import "utilities/border";
+@import "utilities/_color";
+@import "utilities/_border";
+@import "utilities/_radius";
 @import "general";
 @import "header";
 @import "profile";
 @import "greeting";
-@import "messages";
+@import "current-chat";

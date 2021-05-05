@@ -5,7 +5,6 @@ div(class="conteiner h-100 py-md-4 pr-4 pl-4 bg-color-md-gray")
       include header.pug
       div(class="d-flex justify-content-between flex-column h-100 px-4 tab-content overflow-hidden w-100")
         +aside-section("contacts")
-          //section(class="tab-pane hide-scrollbar active show fade pt-5") 
           h2(class="mb-4") Контакты
           include contact.pug
         +aside-section("chats")
@@ -14,9 +13,13 @@ div(class="conteiner h-100 py-md-4 pr-4 pl-4 bg-color-md-gray")
         +aside-section("profile")
           h2(class="mb-4") Профиль
           include profile.pug
-    - const extraClass = page == "index" ? "justify-content-center" : "justify-content-normal align-items-normal"
-    main(class= `col-md d-md-flex flex-column h-100 overflow-hidden justify-content-center align-items-center ${extraClass}`)
+        if page == "chat"
+          div(class="tab-pane fade flex-column h-100" id="current-chat" role="tabpanel" aria-labelledby="chat-tab")
+            div(class="d-flex flex-column h-100 d-md-none mt-md-0")
+              include current-chat.pug
+    - const options = page === "index" ? "justify-content-center" : "justify-content-start align-items-stretch"
+    main(class= `col-md d-none d-md-flex flex-column h-100 overflow-hidden ${options}`)
       if page == "index"
         include greeting.pug
       else
-        include messages.pug
+        include current-chat.pug
