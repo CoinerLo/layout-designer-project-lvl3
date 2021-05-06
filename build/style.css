@@ -10147,6 +10147,13 @@ a:hover .color-secondary {
      -moz-column-gap: 0.5rem;
           column-gap: 0.5rem; }
 
+.h-91 {
+  height: 91px; }
+
+.py-8 {
+  padding-top: 0.875rem;
+  padding-bottom: 0.875rem; }
+
 @media (min-width: 768px) {
   .overflow-md-hidden {
     overflow: hidden; }

@@ -81,6 +81,15 @@ a:hover .color-secondary {
   column-gap: $spacer * 0.5;
 }
 
+.h-91 {
+  height: 91px;
+}
+
+.py-8 {
+  padding-top: $spacer * 0.875;
+  padding-bottom: $spacer * 0.875;
+}
+
 @media (min-width: 768px) {
 
   .overflow-md-hidden {
