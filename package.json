@@ -1,4 +1,21 @@
 {
+  "name": "page-layout_messenger-hexlet-chat",
+  "description": "messenger",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CoinerLo/page-layout_messenger-hexlet-chat.git"
+  },
+  "author": "Igor' Lomakin <coiner4677@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CoinerLo/page-layout_messenger-hexlet-chat/issues"
+  },
+  "homepage": "https://github.com/CoinerLo/page-layout_messenger-hexlet-chat#readme",
   "dependencies": {
     "bootstrap": "^4.6.0",
     "jquery": "^3.6.0",
@@ -23,22 +40,5 @@
     "stylelint-order": "^4.1.0",
     "stylelint-scss": "^3.19.0",
     "surge": "^0.23.0"
-  },
-  "name": "layout-designer-project-lvl3",
-  "description": "[![Actions Status](https://github.com/CoinerLo/layout-designer-project-lvl3/workflows/hexlet-check/badge.svg)](https://github.com/CoinerLo/layout-designer-project-lvl3/actions)",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/CoinerLo/layout-designer-project-lvl3.git"
-  },
-  "author": "Igor' Lomakin",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/CoinerLo/layout-designer-project-lvl3/issues"
-  },
-  "homepage": "https://github.com/CoinerLo/layout-designer-project-lvl3#readme"
+  }
 }
